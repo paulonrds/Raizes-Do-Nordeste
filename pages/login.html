@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Minha conta | Raízes do Nordeste</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-simbolo">
+                    RN
+                </span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+
+            </a>
+
+            <a
+                href="../index.html"
+                class="voltar"
+            >
+                Voltar ao cardápio
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="container pagina-conta">
+
+        <section class="apresentacao">
+
+            <span>MINHA CONTA</span>
+
+            <h1>
+                Entre para aproveitar ainda mais.
+            </h1>
+
+            <p>
+                Acompanhe seus pedidos, participe
+                do programa de fidelidade e receba
+                benefícios da Raízes do Nordeste.
+            </p>
+
+            <div class="beneficios">
+
+                <div>
+                    <span>✓</span>
+                    Histórico de pedidos
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Pontos de fidelidade
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Promoções personalizadas
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="conta-card">
+
+            <div class="abas">
+
+                <button
+                    id="aba-login"
+                    class="aba ativa"
+                    type="button"
+                >
+                    Entrar
+                </button>
+
+                <button
+                    id="aba-cadastro"
+                    class="aba"
+                    type="button"
+                >
+                    Criar conta
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <form
+                id="form-login"
+                class="formulario"
+            >
+
+                <h2>Bem-vindo de volta</h2>
+
+                <p>
+                    Entre com seus dados.
+                </p>
+
+
+                <label>
+                    E-mail
+
+                    <input
+                        id="login-email"
+                        type="email"
+                        required
+                        placeholder="seu@email.com"
+                    >
+                </label>
+
+
+                <label>
+                    Senha
+
+                    <input
+                        id="login-senha"
+                        type="password"
+                        required
+                        placeholder="Sua senha"
+                    >
+                </label>
+
+
+                <button
+                    class="botao-principal"
+                    type="submit"
+                >
+                    Entrar
+                </button>
+
+
+                <div
+                    id="mensagem-login"
+                    class="mensagem"
+                    aria-live="polite"
+                ></div>
+
+            </form>
+
+
+            <!-- CADASTRO -->
+
+            <form
+                id="form-cadastro"
+                class="formulario escondido"
+            >
+
+                <h2>Crie sua conta</h2>
+
+                <p>
+                    É rápido e você já poderá
+                    participar do programa de fidelidade.
+                </p>
+
+
+                <label>
+                    Nome completo
+
+                    <input
+                        id="cadastro-nome"
+                        type="text"
+                        required
+                        placeholder="Seu nome"
+                    >
+                </label>
+
+
+                <label>
+                    E-mail
+
+                    <input
+                        id="cadastro-email"
+                        type="email"
+                        required
+                        placeholder="seu@email.com"
+                    >
+                </label>
+
+
+                <label>
+                    Senha
+
+                    <input
+                        id="cadastro-senha"
+                        type="password"
+                        required
+                        minlength="6"
+                        placeholder="Mínimo de 6 caracteres"
+                    >
+                </label>
+
+
+                <div class="lgpd-box">
+
+                    <label class="consentimento">
+
+                        <input
+                            id="aceite-lgpd"
+                            type="checkbox"
+                            required
+                        >
+
+                        <span>
+                            Li e concordo com o tratamento
+                            dos meus dados para criação da
+                            conta e execução dos serviços.
+                        </span>
+
+                    </label>
+
+
+                    <p>
+                        Seus dados serão utilizados
+                        apenas para as finalidades
+                        informadas e poderão ser
+                        gerenciados posteriormente
+                        nas preferências de privacidade.
+                    </p>
+
+                </div>
+
+
+                <label class="consentimento opcional">
+
+                    <input
+                        id="aceite-marketing"
+                        type="checkbox"
+                    >
+
+                    <span>
+                        Quero receber promoções e
+                        novidades da Raízes do Nordeste.
+                        (Opcional)
+                    </span>
+
+                </label>
+
+
+                <button
+                    class="botao-principal"
+                    type="submit"
+                >
+                    Criar minha conta
+                </button>
+
+
+                <div
+                    id="mensagem-cadastro"
+                    class="mensagem"
+                    aria-live="polite"
+                ></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

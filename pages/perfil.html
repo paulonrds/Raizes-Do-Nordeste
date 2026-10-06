@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Minha conta | Raízes do Nordeste</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/perfil.css"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-simbolo">
+                    RN
+                </span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+
+            </a>
+
+            <a
+                href="../index.html"
+                class="voltar"
+            >
+                ← Voltar ao cardápio
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="container pagina-perfil">
+
+        <section class="perfil-topo">
+
+            <span>MINHA CONTA</span>
+
+            <h1 id="saudacao-cliente">
+                Olá!
+            </h1>
+
+            <p>
+                Gerencie seus dados, benefícios
+                e preferências de privacidade.
+            </p>
+
+        </section>
+
+
+        <div class="perfil-grid">
+
+            <!-- DADOS PESSOAIS -->
+
+            <section class="card">
+
+                <div class="card-titulo">
+
+                    <span class="icone-card">
+                        👤
+                    </span>
+
+                    <div>
+                        <h2>Dados pessoais</h2>
+
+                        <p>
+                            Informações da sua conta.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="informacao">
+
+                    <span>Nome</span>
+
+                    <strong id="perfil-nome">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+
+                <div class="informacao">
+
+                    <span>E-mail</span>
+
+                    <strong id="perfil-email">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- FIDELIDADE -->
+
+            <section class="card fidelidade-card">
+
+                <div class="card-titulo">
+
+                    <span class="icone-card">
+                        ⭐
+                    </span>
+
+                    <div>
+                        <h2>Raízes Fidelidade</h2>
+
+                        <p>
+                            Seus benefícios em um só lugar.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="saldo-pontos">
+
+                    <span>Seu saldo</span>
+
+                    <strong id="perfil-pontos">
+                        0 pontos
+                    </strong>
+
+                </div>
+
+
+                <p class="texto-apoio">
+                    Acumule pontos em seus pedidos
+                    e troque por recompensas.
+                </p>
+
+
+                <button
+                    id="ver-recompensas"
+                    class="botao-secundario"
+                    type="button"
+                >
+                    Ver recompensas
+                </button>
+
+            </section>
+
+
+            <!-- PRIVACIDADE -->
+
+            <section class="card privacidade-card">
+
+                <div class="card-titulo">
+
+                    <span class="icone-card">
+                        🔒
+                    </span>
+
+                    <div>
+                        <h2>Privacidade e LGPD</h2>
+
+                        <p>
+                            Controle suas preferências.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="consentimento-info">
+
+                    <div>
+                        <strong>
+                            Dados necessários para a conta
+                        </strong>
+
+                        <p>
+                            Utilizados para cadastro,
+                            pedidos e execução dos serviços.
+                        </p>
+                    </div>
+
+                    <span class="status-ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <label class="preferencia">
+
+                    <div>
+                        <strong>
+                            Promoções e novidades
+                        </strong>
+
+                        <span>
+                            Autorizo o uso dos meus dados
+                            para comunicações promocionais.
+                        </span>
+                    </div>
+
+                    <input
+                        id="preferencia-marketing"
+                        type="checkbox"
+                    >
+
+                </label>
+
+
+                <div
+                    id="mensagem-privacidade"
+                    class="mensagem"
+                    aria-live="polite"
+                ></div>
+
+            </section>
+
+
+            <!-- SESSÃO -->
+
+            <section class="card sessao-card">
+
+                <div>
+
+                    <h2>Sessão</h2>
+
+                    <p>
+                        Você está conectado à sua conta.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="sair-conta"
+                    class="botao-sair"
+                    type="button"
+                >
+                    Sair da conta
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,526 @@
+:root {
+    --terracota: #A64029;
+    --terracota-escuro: #7D2F20;
+    --verde: #294936;
+    --creme: #FFF8EA;
+    --branco: #FFFFFF;
+    --texto: #2C2925;
+    --texto-claro: #6E6962;
+    --borda: #E7DED0;
+
+    --sombra:
+        0 8px 25px rgba(44, 41, 37, 0.08);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: var(--creme);
+    color: var(--texto);
+
+    line-height: 1.5;
+}
+
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.container {
+    width: min(100% - 32px, 1050px);
+    margin-inline: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    background-color: var(--branco);
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.cabecalho .container {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo-simbolo {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--terracota);
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.logo div {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.logo strong {
+    color: var(--terracota);
+}
+
+
+.logo div span {
+    font-size: 0.75rem;
+}
+
+
+.pedido-online {
+    color: var(--verde);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina-pedido {
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+
+
+.pedido-topo {
+    margin-bottom: 30px;
+}
+
+
+.sucesso {
+    color: var(--verde);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+.pedido-topo h1 {
+    margin: 6px 0;
+
+    font-size: clamp(
+        2rem,
+        7vw,
+        3rem
+    );
+}
+
+
+.pedido-topo p {
+    color: var(--texto-claro);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.pedido-grid {
+    display: grid;
+
+    gap: 22px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.acompanhamento-card,
+.resumo-card {
+    padding: 22px;
+
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+
+    background-color: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================
+   IDENTIFICAÇÃO
+========================= */
+
+.pedido-identificacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.pedido-identificacao > div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pedido-identificacao span {
+    color: var(--texto-claro);
+
+    font-size: 0.8rem;
+}
+
+
+.pedido-identificacao strong {
+    font-size: 1.4rem;
+}
+
+
+.status-atual {
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background-color: #FFF1E9;
+
+    color: var(--terracota) !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   PROGRESSO
+========================= */
+
+.linha-progresso {
+    display: grid;
+
+    gap: 0;
+
+    margin-top: 28px;
+}
+
+
+.etapa {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        44px 1fr;
+
+    gap: 13px;
+
+    min-height: 90px;
+
+    color: #AAA39B;
+}
+
+
+.etapa:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    top: 43px;
+
+    width: 3px;
+    height: 47px;
+
+    background-color: var(--borda);
+}
+
+
+.etapa-marcador {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 1;
+
+    border: 2px solid var(--borda);
+    border-radius: 50%;
+
+    background-color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.etapa div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 3px;
+}
+
+
+.etapa div:last-child span {
+    margin-top: 2px;
+
+    font-size: 0.85rem;
+}
+
+
+.etapa.ativa {
+    color: var(--texto);
+}
+
+
+.etapa.ativa .etapa-marcador {
+    border-color: var(--terracota);
+
+    background-color: var(--terracota);
+    color: var(--branco);
+}
+
+
+.etapa.concluida::after {
+    background-color: var(--terracota);
+}
+
+
+/* =========================
+   SIMULAÇÃO
+========================= */
+
+.controle-simulacao {
+    margin-top: 20px;
+    padding: 16px;
+
+    border: 1px dashed var(--borda);
+    border-radius: 10px;
+
+    background-color: #FAFAF8;
+}
+
+
+.controle-simulacao > span {
+    color: var(--terracota);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.controle-simulacao p {
+    margin: 4px 0 13px;
+
+    color: var(--texto-claro);
+
+    font-size: 0.85rem;
+}
+
+
+.controle-simulacao button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background-color: var(--terracota);
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.controle-simulacao button:hover {
+    background-color:
+        var(--terracota-escuro);
+}
+
+
+.controle-simulacao button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.resumo-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.informacao {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.informacao span {
+    color: var(--texto-claro);
+}
+
+
+.informacao strong {
+    text-align: right;
+}
+
+
+.informacao.total {
+    margin-top: 18px;
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--borda);
+
+    font-size: 1.1rem;
+}
+
+
+.informacao.total strong {
+    color: var(--verde);
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   ITENS
+========================= */
+
+.lista-itens-pedido {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top:
+        1px solid var(--borda);
+}
+
+
+.item-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 8px 0;
+
+    font-size: 0.85rem;
+}
+
+
+.item-pedido-info {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.item-pedido-emoji {
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   AÇÕES
+========================= */
+
+.acoes-pedido {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+
+.voltar-inicio {
+    color: var(--terracota);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 800px) {
+
+    .pedido-grid {
+        grid-template-columns:
+            minmax(0, 1fr) 340px;
+
+        align-items: start;
+    }
+
+
+    .resumo-card {
+        position: sticky;
+
+        top: 20px;
+    }
+
+}

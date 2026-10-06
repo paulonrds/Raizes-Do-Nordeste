@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pagamento | Raízes do Nordeste</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/pagamento.css"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-simbolo">RN</span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+            </a>
+
+            <span class="ambiente-seguro">
+                🔒 Ambiente seguro
+            </span>
+
+        </div>
+    </header>
+
+
+    <main class="container pagamento">
+
+        <a
+            href="checkout.html"
+            class="voltar"
+        >
+            ← Voltar ao checkout
+        </a>
+
+
+        <section class="pagamento-card">
+
+            <div class="pagamento-topo">
+                <span>Pagamento externo simulado</span>
+
+                <h1>Finalize seu pagamento</h1>
+
+                <p>
+                    Confira os dados antes de confirmar
+                    a transação.
+                </p>
+            </div>
+
+
+            <div class="dados-pagamento">
+
+                <div class="linha">
+                    <span>Forma de pagamento</span>
+
+                    <strong id="forma-pagamento">
+                        Carregando...
+                    </strong>
+                </div>
+
+
+                <div class="linha">
+                    <span>Quantidade de itens</span>
+
+                    <strong id="quantidade-pagamento">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="linha total">
+                    <span>Valor da transação</span>
+
+                    <strong id="valor-pagamento">
+                        R$ 0,00
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="provedor">
+
+                <span class="provedor-icone">
+                    🔐
+                </span>
+
+                <div>
+                    <strong>
+                        Gateway de Pagamento
+                    </strong>
+
+                    <p>
+                        Simulação acadêmica de integração
+                        com serviço externo.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button
+                id="processar-pagamento"
+                class="processar-pagamento"
+                type="button"
+            >
+                Confirmar pagamento
+            </button>
+
+            <!-- RESULTADO DA INTEGRAÇÃO -->
+
+            <div
+                id="status-pagamento"
+                class="status-pagamento"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- CONTROLES DA SIMULAÇÃO -->
+
+            <div class="simulacao">
+                 id="area-simulacao"                  
+                 
+            >   
+
+                <p>
+                <strong>Simulação acadêmica</strong>
+                </p>
+
+                <span>
+                    Escolha a resposta do serviço externo:
+                 </span>
+
+                <div class="simulacao-opcoes">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="resultado-simulacao"
+                            value="aprovado"
+                            checked
+                        >
+                        Aprovar
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="resultado-simulacao"
+                        value="recusado"
+                    >
+                    Recusar
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="resultado-simulacao"
+                        value="erro"
+                    >
+                    Falha
+                </label>
+
+    </div>
+
+            </div>
+
+
+            <p class="observacao">
+                Nenhuma transação financeira real
+                será realizada.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/pagamento.js"></script>
+
+</body>
+
+</html>

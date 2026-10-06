@@ -1,0 +1,453 @@
+:root {
+    --terracota: #A64029;
+    --terracota-escuro: #7D2F20;
+    --verde: #294936;
+    --creme: #FFF8EA;
+    --branco: #FFFFFF;
+    --texto: #2C2925;
+    --texto-claro: #6E6962;
+    --borda: #E7DED0;
+
+    --sombra:
+        0 8px 25px rgba(44, 41, 37, 0.08);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: var(--creme);
+    color: var(--texto);
+
+    line-height: 1.5;
+}
+
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.container {
+    width: min(100% - 32px, 900px);
+    margin-inline: auto;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: var(--branco);
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.cabecalho .container {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo-simbolo {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--terracota);
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.logo div {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.logo strong {
+    color: var(--terracota);
+}
+
+
+.logo div span {
+    font-size: 0.75rem;
+}
+
+
+.ambiente-seguro {
+    color: var(--verde);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* PAGAMENTO */
+
+.pagamento {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+
+.voltar {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: var(--terracota);
+
+    font-weight: 700;
+}
+
+
+.pagamento-card {
+    max-width: 600px;
+
+    margin-inline: auto;
+
+    padding: 26px;
+
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+
+    background-color: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+
+.pagamento-topo > span {
+    color: var(--terracota);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.pagamento-topo h1 {
+    margin: 7px 0;
+
+    font-size: clamp(
+        2rem,
+        7vw,
+        2.8rem
+    );
+}
+
+
+.pagamento-topo p {
+    color: var(--texto-claro);
+}
+
+
+/* DADOS */
+
+.dados-pagamento {
+    margin-top: 28px;
+}
+
+
+.linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.linha span {
+    color: var(--texto-claro);
+}
+
+
+.linha.total {
+    margin-top: 5px;
+
+    font-size: 1.15rem;
+}
+
+
+.linha.total strong {
+    color: var(--verde);
+
+    font-size: 1.3rem;
+}
+
+
+/* PROVEDOR */
+
+.provedor {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: var(--creme);
+}
+
+
+.provedor-icone {
+    font-size: 1.8rem;
+}
+
+
+.provedor p {
+    color: var(--texto-claro);
+
+    font-size: 0.8rem;
+}
+
+
+/* BOTÃO */
+
+.processar-pagamento {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background-color: var(--terracota);
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.processar-pagamento:hover {
+    background-color:
+        var(--terracota-escuro);
+}
+
+
+.observacao {
+    margin-top: 14px;
+
+    color: var(--texto-claro);
+
+    text-align: center;
+
+    font-size: 0.78rem;
+}
+
+/* =========================
+   PROCESSAMENTO
+========================= */
+
+.status-pagamento {
+    display: none;
+
+    margin-top: 18px;
+    padding: 18px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.status-pagamento.visivel {
+    display: block;
+}
+
+
+.status-pagamento.processando {
+    display: block;
+
+    background-color: #FFF4D6;
+    color: #72520B;
+
+    border: 1px solid #E8C96D;
+}
+
+
+.status-pagamento.aprovado {
+    display: block;
+
+    background-color: #EAF6EE;
+    color: #245B35;
+
+    border: 1px solid #9BCBAB;
+}
+
+
+.status-pagamento.recusado {
+    display: block;
+
+    background-color: #FFF0ED;
+    color: #8A2E20;
+
+    border: 1px solid #E0A096;
+}
+
+
+.status-pagamento.erro {
+    display: block;
+
+    background-color: #FFF4D6;
+    color: #72520B;
+
+    border: 1px solid #E8C96D;
+}
+
+
+.status-icone {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 2rem;
+}
+
+
+.status-pagamento strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 1.05rem;
+}
+
+
+.status-pagamento p {
+    font-size: 0.88rem;
+}
+
+/* =========================
+   SIMULAÇÃO ACADÊMICA
+========================= */
+
+.simulacao {
+    margin-top: 20px;
+    padding: 15px;
+
+    border: 1px dashed var(--borda);
+    border-radius: 10px;
+
+    background-color: #FAFAF8;
+}
+
+
+.simulacao > p {
+    margin-bottom: 3px;
+}
+
+
+.simulacao > span {
+    color: var(--texto-claro);
+
+    font-size: 0.8rem;
+}
+
+
+.simulacao-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 12px;
+}
+
+
+.simulacao-opcoes label {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+}
+
+
+/* BOTÃO PROCESSANDO */
+
+.processar-pagamento:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* ANIMAÇÃO */
+
+.carregando {
+    width: 30px;
+    height: 30px;
+
+    margin: 0 auto 10px;
+
+    border: 4px solid rgba(0, 0, 0, 0.15);
+
+    border-top-color: currentColor;
+    border-radius: 50%;
+
+    animation:
+        girar 0.8s linear infinite;
+}
+
+
+@keyframes girar {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}

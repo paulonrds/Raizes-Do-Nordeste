@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | Raízes do Nordeste</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/checkout.css"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-simbolo">
+                    RN
+                </span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+
+            </a>
+
+
+            <span class="checkout-seguro">
+                Checkout
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <main class="container checkout">
+
+        <a
+            href="../index.html"
+            class="voltar"
+        >
+            ← Voltar ao cardápio
+        </a>
+
+
+        <div class="titulo-checkout">
+
+            <span>Finalização do pedido</span>
+
+            <h1>Confira seu pedido</h1>
+
+            <p>
+                Revise os produtos e confirme
+                as informações antes do pagamento.
+            </p>
+
+        </div>
+
+
+        <div class="checkout-grid">
+
+            <!-- COLUNA PRINCIPAL -->
+
+            <section class="checkout-principal">
+
+
+                <!-- UNIDADE -->
+
+                <article class="bloco">
+
+                    <div class="numero-etapa">
+                        1
+                    </div>
+
+                    <div class="bloco-conteudo">
+
+                        <h2>Unidade de retirada</h2>
+
+                        <p>
+                            Seu pedido será preparado
+                            para retirada nesta unidade.
+                        </p>
+
+                        <div class="unidade-selecionada">
+
+                            <span class="icone">
+                                📍
+                            </span>
+
+                            <div>
+                                <small>
+                                    Retirada em
+                                </small>
+
+                                <strong id="nome-unidade">
+                                    Carregando...
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITENS -->
+
+                <article class="bloco">
+
+                    <div class="numero-etapa">
+                        2
+                    </div>
+
+                    <div class="bloco-conteudo">
+
+                        <h2>Itens do pedido</h2>
+
+                        <div id="checkout-itens">
+                            <!-- JavaScript -->
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RETIRADA -->
+
+                <article class="bloco">
+
+                    <div class="numero-etapa">
+                        3
+                    </div>
+
+                    <div class="bloco-conteudo">
+
+                        <h2>Forma de retirada</h2>
+
+                        <label class="opcao selecionada">
+
+                            <input
+                                type="radio"
+                                name="retirada"
+                                value="balcao"
+                                checked
+                            >
+
+                            <div>
+                                <strong>
+                                    Retirada no balcão
+                                </strong>
+
+                                <span>
+                                    Retire seu pedido quando
+                                    estiver pronto.
+                                </span>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PAGAMENTO -->
+
+                <article class="bloco">
+
+                    <div class="numero-etapa">
+                        4
+                    </div>
+
+                    <div class="bloco-conteudo">
+
+                        <h2>Forma de pagamento</h2>
+
+                        <p class="texto-apoio">
+                            O pagamento será processado
+                            por um serviço externo seguro.
+                        </p>
+
+
+                        <div class="formas-pagamento">
+
+                            <label class="opcao">
+
+                                <input
+                                    type="radio"
+                                    name="pagamento"
+                                    value="pix"
+                                    checked
+                                >
+
+                                <div>
+                                    <strong>PIX</strong>
+
+                                    <span>
+                                        Pagamento rápido
+                                    </span>
+                                </div>
+
+                            </label>
+
+
+                            <label class="opcao">
+
+                                <input
+                                    type="radio"
+                                    name="pagamento"
+                                    value="cartao"
+                                >
+
+                                <div>
+                                    <strong>
+                                        Cartão
+                                    </strong>
+
+                                    <span>
+                                        Processamento externo
+                                    </span>
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- RESUMO -->
+
+            <aside class="resumo-pedido">
+
+                <h2>Resumo</h2>
+
+                <div class="linha">
+                    <span>Quantidade</span>
+
+                    <strong id="quantidade-checkout">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="linha">
+                    <span>Subtotal</span>
+
+                    <strong id="subtotal-checkout">
+                        R$ 0,00
+                    </strong>
+                </div>
+
+
+                <div class="linha total">
+                    <span>Total</span>
+
+                    <strong id="total-checkout">
+                        R$ 0,00
+                    </strong>
+                </div>
+
+
+                <button
+                    id="confirmar-pagamento"
+                    class="confirmar-pagamento"
+                    type="button"
+                >
+                    Ir para pagamento
+                </button>
+
+
+                <p class="seguranca">
+                    🔒 O pagamento é processado
+                    por serviço externo.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>

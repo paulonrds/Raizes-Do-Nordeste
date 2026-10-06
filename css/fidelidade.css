@@ -1,0 +1,235 @@
+:root {
+    --terracota: #A64029;
+    --terracota-escuro: #7D2F20;
+    --amarelo: #E8A62A;
+    --verde: #294936;
+    --creme: #FFF8EA;
+    --branco: #FFFFFF;
+    --texto: #2C2925;
+    --texto-claro: #6E6962;
+    --borda: #E7DED0;
+    --sombra: 0 8px 25px rgba(44, 41, 37, .08);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--creme);
+    color: var(--texto);
+}
+
+
+.container {
+    width: min(92%, 1100px);
+    margin: 0 auto;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+
+.cabecalho-conteudo {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--terracota);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.logo-marca {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--terracota);
+    color: var(--branco);
+    display: grid;
+    place-items: center;
+}
+
+
+.voltar {
+    color: var(--terracota);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao {
+    padding: 50px 0 25px;
+}
+
+
+.destaque {
+    color: var(--terracota);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.introducao h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+
+.introducao p {
+    max-width: 620px;
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+
+/* SALDO */
+
+.saldo {
+    padding: 25px;
+    background: var(--verde);
+    color: var(--branco);
+    border-radius: 18px;
+    margin-bottom: 35px;
+}
+
+
+.saldo span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.saldo strong {
+    display: block;
+    color: var(--amarelo);
+    font-size: 2rem;
+}
+
+
+.saldo p {
+    margin-bottom: 0;
+    opacity: .9;
+}
+
+/* MENSAGEM DE RESGATE */
+
+.mensagem-resgate {
+    display: none;
+    margin-bottom: 25px;
+    padding: 16px 18px;
+    background: #E8F3EC;
+    border: 1px solid #B7D8C1;
+    border-radius: 12px;
+    color: var(--verde);
+    font-weight: 700;
+}
+
+
+.mensagem-resgate.ativa {
+    display: block;
+}
+
+/* RECOMPENSAS */
+
+.recompensas {
+    padding-bottom: 60px;
+}
+
+
+.recompensas h2 {
+    margin-bottom: 20px;
+}
+
+
+.lista-recompensas {
+    display: grid;
+    gap: 18px;
+}
+
+
+.recompensa-card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+}
+
+
+.recompensa-icone {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+
+.recompensa-conteudo h3 {
+    margin: 0 0 8px;
+}
+
+
+.recompensa-conteudo p {
+    color: var(--texto-claro);
+    line-height: 1.5;
+}
+
+
+.recompensa-conteudo strong {
+    color: var(--terracota);
+}
+
+
+.botao-resgatar {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 18px;
+    background: var(--terracota);
+    color: var(--branco);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.botao-resgatar:disabled {
+    background: var(--borda);
+    color: var(--texto-claro);
+    cursor: not-allowed;
+}
+
+
+@media (min-width: 800px) {
+
+    .introducao h1 {
+        font-size: 2.6rem;
+    }
+
+
+    .lista-recompensas {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}

@@ -1,0 +1,478 @@
+:root {
+    --terracota: #A64029;
+    --terracota-escuro: #7D2F20;
+    --verde: #294936;
+    --creme: #FFF8EA;
+    --branco: #FFFFFF;
+    --texto: #2C2925;
+    --texto-claro: #6E6962;
+    --borda: #E7DED0;
+
+    --sombra:
+        0 8px 25px rgba(44, 41, 37, 0.08);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: var(--creme);
+    color: var(--texto);
+
+    line-height: 1.5;
+}
+
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.container {
+    width: min(100% - 32px, 1050px);
+    margin-inline: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    background-color: var(--branco);
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.cabecalho .container {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo-simbolo {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--terracota);
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+
+.logo div {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.logo strong {
+    color: var(--terracota);
+}
+
+
+.logo div span {
+    font-size: 0.75rem;
+}
+
+
+.voltar {
+    color: var(--terracota);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina-perfil {
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+
+
+.perfil-topo {
+    margin-bottom: 30px;
+}
+
+
+.perfil-topo > span {
+    color: var(--terracota);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+.perfil-topo h1 {
+    margin: 5px 0;
+
+    font-size: clamp(
+        2.2rem,
+        7vw,
+        3.2rem
+    );
+}
+
+
+.perfil-topo p {
+    color: var(--texto-claro);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.perfil-grid {
+    display: grid;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    padding: 22px;
+
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+
+    background-color: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+
+.card-titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+
+.icone-card {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background-color: var(--creme);
+
+    font-size: 1.3rem;
+}
+
+
+.card-titulo h2 {
+    font-size: 1.2rem;
+}
+
+
+.card-titulo p,
+.sessao-card p {
+    color: var(--texto-claro);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   DADOS
+========================= */
+
+.informacao {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-top:
+        1px solid var(--borda);
+}
+
+
+.informacao span {
+    color: var(--texto-claro);
+}
+
+
+.informacao strong {
+    text-align: right;
+}
+
+
+/* =========================
+   FIDELIDADE
+========================= */
+
+.saldo-pontos {
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+
+.saldo-pontos span {
+    display: block;
+
+    font-size: 0.8rem;
+}
+
+
+.saldo-pontos strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 1.7rem;
+}
+
+
+.texto-apoio {
+    margin: 15px 0;
+
+    color: var(--texto-claro);
+
+    font-size: 0.85rem;
+}
+
+
+.botao-secundario {
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--terracota);
+
+    border-radius: 8px;
+
+    background-color: transparent;
+    color: var(--terracota);
+
+    font-weight: 700;
+}
+
+
+.botao-secundario:hover {
+    background-color: #FFF4EE;
+}
+
+
+/* =========================
+   LGPD
+========================= */
+
+.consentimento-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    background-color: var(--creme);
+}
+
+
+.consentimento-info p {
+    margin-top: 3px;
+
+    color: var(--texto-claro);
+
+    font-size: 0.78rem;
+}
+
+
+.status-ativo {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background-color: #EAF6EE;
+    color: #245B35;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+.preferencia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--borda);
+}
+
+
+.preferencia div {
+    display: grid;
+
+    gap: 3px;
+}
+
+
+.preferencia span {
+    color: var(--texto-claro);
+
+    font-size: 0.78rem;
+}
+
+
+.preferencia input {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--terracota);
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.mensagem {
+    display: none;
+
+    margin-top: 15px;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    font-size: 0.8rem;
+}
+
+
+.mensagem.sucesso {
+    display: block;
+
+    background-color: #EAF6EE;
+    color: #245B35;
+}
+
+
+/* =========================
+   SESSÃO
+========================= */
+
+.sessao-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.botao-sair {
+    padding: 11px 18px;
+
+    border:
+        1px solid var(--terracota);
+
+    border-radius: 8px;
+
+    background-color: transparent;
+    color: var(--terracota);
+
+    font-weight: 700;
+}
+
+
+.botao-sair:hover {
+    background-color: #FFF0ED;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 800px) {
+
+    .perfil-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .privacidade-card,
+    .sessao-card {
+        grid-column:
+            1 / -1;
+    }
+
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Raízes do Nordeste</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-simbolo">RN</span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+            </a>
+
+            <nav class="menu" id="menu-principal">
+                <a href="#cardapio">Cardápio</a>
+                <a href="#promocoes">Promoções</a>
+                <a href="pages/fidelidade.html">Fidelidade</a>
+            </nav>
+
+            <a
+            href="pages/login.html"
+            id="link-conta"
+            class="link-conta"
+>
+    Entrar
+</a>
+
+<button
+            class="botao-menu-mobile"
+            id="botao-menu-mobile"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+>
+    ☰
+</button>
+
+            <button
+                class="botao-carrinho"
+                id="abrir-carrinho"
+                type="button"
+            >
+            Carrinho
+            <span id="quantidade-carrinho">0</span>
+        </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div class="container hero-conteudo">
+
+                <div class="hero-texto">
+                    <span class="destaque">Sabor que vem das nossas raízes</span>
+
+                    <h1>
+                        O Nordeste mais perto de você.
+                    </h1>
+
+                    <p>
+                        Escolha sua unidade, monte seu pedido e aproveite
+                        os sabores da nossa terra.
+                    </p>
+
+                    <section class="unidade">
+            <div class="container">
+
+                <p>Você está pedindo em:</p>
+
+                <label for="seletor-unidade">
+                    Selecione uma unidade
+                </label>
+
+                <select id="seletor-unidade">
+                    <option value="boa-viagem">
+                        Recife — Boa Viagem
+                    </option>
+
+                    <option value="olinda">
+                        Olinda — Centro
+                    </option>
+
+                    <option value="salvador">
+                        Salvador — Barra
+                    </option>
+                </select>
+
+            </div>
+
+        </section>
+
+                    <a href="#cardapio" class="botao-principal">
+                        Ver cardápio
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROMOÇÕES -->
+
+<section
+    id="promocoes"
+    class="promocoes"
+>
+
+    <div class="container">
+
+        <div class="secao-cabecalho">
+
+            <span class="destaque">
+                OFERTAS DA CASA
+            </span>
+
+            <h2>
+                Promoções
+            </h2>
+
+            <p>
+                Aproveite ofertas especiais
+                disponíveis na sua unidade.
+            </p>
+
+        </div>
+
+
+        <div
+            id="lista-promocoes"
+            class="lista-promocoes"
+        >
+            <!-- Promoções inseridas pelo JavaScript -->
+        </div>
+
+    </div>
+
+</section>
+
+        <section id="cardapio" class="cardapio">
+            <div class="container">
+
+                <div class="titulo-secao">
+                    <div>
+                        <span>Nosso cardápio</span>
+                        <h2>Sabores do Nordeste</h2>
+                    </div>
+
+                    <input
+                        type="search"
+                        id="busca-produto"
+                        placeholder="Buscar produto..."
+                    >
+                </div>
+
+
+                <div class="categorias">
+                    <button
+                        class="categoria ativa"
+                        data-categoria="Todos"
+                        type="button"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="categoria"
+                        data-categoria="Cuscuz"
+                        type="button"
+                    >
+                        Cuscuz
+                    </button>
+
+                    <button
+                        class="categoria"
+                        data-categoria="Tapiocas"
+                        type="button"
+                    >
+                        Tapiocas
+                    </button>
+
+                    <button
+                        class="categoria"
+                        data-categoria="Doces"
+                        type="button"
+                    >
+                        Doces
+                    </button>
+
+                    <button
+                        class="categoria"
+                        data-categoria="Bebidas"
+                        type="button"
+                    >
+                        Bebidas
+                    </button>
+                </div>
+
+
+                <div id="lista-produtos" class="lista-produtos">
+                    <!-- JavaScript adicionará os produtos aqui -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+        <!-- FUNDO ESCURO DO CARRINHO -->
+<div
+    id="carrinho-overlay"
+    class="carrinho-overlay"
+></div>
+
+<!-- PAINEL DO CARRINHO -->
+
+<aside
+    id="painel-carrinho"
+    class="painel-carrinho"
+    aria-label="Carrinho de compras"
+>
+
+    <div class="carrinho-cabecalho">
+
+        <div>
+            <span class="carrinho-subtitulo">
+                Seu pedido
+            </span>
+
+            <h2>Meu carrinho</h2>
+        </div>
+
+        <button
+            id="fechar-carrinho"
+            class="fechar-carrinho"
+            type="button"
+            aria-label="Fechar carrinho"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        id="itens-carrinho"
+        class="itens-carrinho"
+    >
+        <!-- JavaScript -->
+    </div>
+
+
+    <div class="carrinho-resumo">
+
+        <div class="linha-resumo">
+            <span>Subtotal</span>
+
+            <strong id="subtotal-carrinho">
+                R$ 0,00
+            </strong>
+        </div>
+
+        <p class="aviso-retirada">
+            Pedido para retirada na unidade selecionada.
+        </p>
+
+        <button
+            id="finalizar-pedido"
+            class="finalizar-pedido"
+            type="button"
+        >
+            Continuar para checkout
+        </button>
+
+    </div>
+
+</aside>
+
+    <footer>
+        <div class="container">
+            <strong>Raízes do Nordeste</strong>
+
+            <p>
+                Tecnologia, tradição e sabor em uma única experiência.
+            </p>
+
+            <p class="copyright">
+                Projeto acadêmico — Desenvolvimento Front-end
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/produtos.js"></script>
+    <script src="js/promocoes.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

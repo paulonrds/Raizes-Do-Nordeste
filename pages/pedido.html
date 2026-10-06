@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Acompanhar pedido | Raízes do Nordeste</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/pedido.css"
+    >
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-simbolo">
+                    RN
+                </span>
+
+                <div>
+                    <strong>Raízes</strong>
+                    <span>do Nordeste</span>
+                </div>
+
+            </a>
+
+            <span class="pedido-online">
+                Pedido online
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <main class="container pagina-pedido">
+
+        <section class="pedido-topo">
+
+            <span class="sucesso">
+                ✓ PAGAMENTO APROVADO
+            </span>
+
+            <h1>Estamos preparando seu pedido!</h1>
+
+            <p>
+                Acompanhe abaixo o andamento
+                da sua retirada.
+            </p>
+
+        </section>
+
+
+        <div class="pedido-grid">
+
+            <!-- ACOMPANHAMENTO -->
+
+            <section class="acompanhamento-card">
+
+                <div class="pedido-identificacao">
+
+                    <div>
+                        <span>Pedido</span>
+
+                        <strong id="numero-pedido">
+                            #------
+                        </strong>
+                    </div>
+
+                    <span
+                        id="status-atual"
+                        class="status-atual"
+                    >
+                        Pedido recebido
+                    </span>
+
+                </div>
+
+
+                <div class="linha-progresso">
+
+                    <!-- ETAPA 1 -->
+
+                    <div
+                        class="etapa ativa"
+                        id="etapa-recebido"
+                    >
+
+                        <div class="etapa-marcador">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Pedido recebido
+                            </strong>
+
+                            <span>
+                                Pagamento confirmado
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ETAPA 2 -->
+
+                    <div
+                        class="etapa"
+                        id="etapa-preparacao"
+                    >
+
+                        <div class="etapa-marcador">
+                            2
+                        </div>
+
+                        <div>
+                            <strong>
+                                Em preparação
+                            </strong>
+
+                            <span>
+                                A cozinha está preparando
+                                seu pedido
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ETAPA 3 -->
+
+                    <div
+                        class="etapa"
+                        id="etapa-pronto"
+                    >
+
+                        <div class="etapa-marcador">
+                            3
+                        </div>
+
+                        <div>
+                            <strong>
+                                Pronto para retirada
+                            </strong>
+
+                            <span>
+                                Dirija-se ao balcão
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SIMULAÇÃO -->
+
+                <div class="controle-simulacao">
+
+                    <span>
+                        Simulação acadêmica
+                    </span>
+
+                    <p>
+                        Atualize o status para demonstrar
+                        o acompanhamento do pedido.
+                    </p>
+
+                    <button
+                        id="avancar-status"
+                        type="button"
+                    >
+                        Avançar status
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMO -->
+
+            <aside class="resumo-card">
+
+                <h2>Resumo do pedido</h2>
+
+
+                <div class="informacao">
+
+                    <span>Unidade</span>
+
+                    <strong id="unidade-pedido">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+
+                <div class="informacao">
+
+                    <span>Pagamento</span>
+
+                    <strong id="pagamento-pedido">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+
+                <div class="informacao">
+
+                    <span>Itens</span>
+
+                    <strong id="quantidade-pedido">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="informacao total">
+
+                    <span>Total</span>
+
+                    <strong id="total-pedido">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="lista-itens-pedido"
+                    class="lista-itens-pedido"
+                >
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <div class="acoes-pedido">
+
+            <a
+                href="../index.html"
+                class="voltar-inicio"
+            >
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/pedido.js"></script>
+
+</body>
+
+</html>
