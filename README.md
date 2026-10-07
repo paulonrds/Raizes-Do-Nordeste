@@ -156,5 +156,3 @@ Durante o desenvolvimento foram trabalhados conceitos de:
 - LGPD;
 - Testes de software;
 - Integração com serviços externos;
-- Git e versionamento;
-- Publicação Web com GitHub Pages.
